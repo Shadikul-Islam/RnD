@@ -1,0 +1,14 @@
+route:
+  receiver: 'mail'
+  repeat_interval: 4h
+  group_by: [ alertname ]
+
+
+receivers:
+  - name: 'mail'
+    email_configs:
+      - smarthost: 'smtp.gmail.com:587'
+        auth_username: 'netshuvo@gmail.com'
+        auth_password: "LoVeLoNg2ammu"
+        from: 'netshuvo@gmail.com'
+        to: 'sadikul.islam.shuvo@gmail.com'
