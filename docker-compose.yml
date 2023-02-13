@@ -102,10 +102,10 @@ services:
   redis:
      image: redis
      container_name: redis
-    #  ports:
-    #  - 6380:6379
-     expose:
-       - "6379"  
+     ports:
+     - 6379:6379
+    #  expose:
+    #    - "6379"  
      networks:
        - monitor-net 
 
@@ -113,9 +113,9 @@ services:
       image: oliver006/redis_exporter
       container_name: redisexporter
       command: -redis.addr redis://redis:6379
-      # ports:
-      # - 9121:9121
-      expose:
-        - "9121"    
+      ports:
+      - 9121:9121
+      # expose:
+      #   - "9121"    
       networks:
        - monitor-net
