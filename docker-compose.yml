@@ -68,6 +68,10 @@ services:
      - "3000:3000"
     # expose:
     #    - "3000"
+    user: "0"
+    command: >
+      bash -c '
+      grafana-cli plugins install redis-datasource '
     networks:
       - monitor-net
 
