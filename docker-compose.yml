@@ -71,7 +71,8 @@ services:
     user: "0"
     command: >
       bash -c '
-      grafana-cli plugins install redis-datasource '
+      grafana-cli plugins install redis-datasource 
+      '
     networks:
       - monitor-net
 
@@ -117,9 +118,13 @@ services:
       image: oliver006/redis_exporter
       container_name: redisexporter
       command: -redis.addr redis://redis:6379
-      ports:
-      - 9121:9121
-      # expose:
-      #   - "9121"    
+      # ports:
+      # - 9121:9121
+      expose:
+        - "9121"    
       networks:
        - monitor-net
+
+
+# docker-compose up -d
+# Grafana Settings --> Datasource --> Add Datasource --> Search Redis --> Address: redis://ip.6379 --> Save & Test
