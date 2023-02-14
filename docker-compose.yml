@@ -78,7 +78,7 @@ services:
     container_name: nginx
     ports:
       - "80:80" 
-      - "8080:8080"
+      - "81:81"
     # expose:
     #   # - "80"
     #   - "8080"
@@ -96,7 +96,7 @@ services:
        - "9113"
     command:
       - -nginx.scrape-uri
-      - http://nginx:8080/stub_status
+      - http://nginx:81/stub_status
     networks:
       - monitor-net
 
