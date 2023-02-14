@@ -55,6 +55,7 @@ services:
 
   grafana:
     image: grafana/grafana:latest
+    build: .
     container_name: grafana
     volumes:
       - ./Redis:/var/lib/grafana/plugins
@@ -68,11 +69,6 @@ services:
      - "3000:3000"
     # expose:
     #    - "3000"
-    user: "0"
-    command: >
-      bash -c '
-      grafana-cli plugins install redis-datasource 
-      '
     networks:
       - monitor-net
 
@@ -125,6 +121,20 @@ services:
       networks:
        - monitor-net
 
+  cadvisor:
+    image: gcr.io/cadvisor/cadvisor:latest
+    container_name: cadvisor
+    ports:
+    - 8080:8080
+    volumes:
+    - /:/rootfs:ro
+    - /var/run:/var/run:rw
+    - /sys:/sys:ro
+    - /var/lib/docker/:/var/lib/docker:ro
 
+# mv dot-env .env
+# docker-compose build --no-cache
 # docker-compose up -d
+# docker-compose restart
 # Grafana Settings --> Datasource --> Add Datasource --> Search Redis --> Address: redis://ip.6379 --> Save & Test
+# If redis datasource not add then run "docker exec grafana grafana-cli plugins install redis-datasource" and then run "docker restart grafana"
