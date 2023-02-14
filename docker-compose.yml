@@ -131,6 +131,8 @@ services:
     - /var/run:/var/run:rw
     - /sys:/sys:ro
     - /var/lib/docker/:/var/lib/docker:ro
+    networks:
+     - monitor-net
 
 # mv dot-env .env
 # docker-compose build --no-cache
