@@ -31,8 +31,8 @@ spec:
             - name: var-lib-docker
               mountPath: /var/lib/docker
               readOnly: true
-          securityContext:
-            privileged: true
+          # securityContext:
+          #   privileged: true
       volumes:
         - name: rootfs
           hostPath:
