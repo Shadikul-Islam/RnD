@@ -3,10 +3,10 @@ metadata:
   name: nginx-config
 data:
   nginx.conf: |
-    user  nginx;
+    user nginx;
     events {
       worker_connections 1024;
-    }
+      }
     http {
       server {
         listen 80;
@@ -17,4 +17,4 @@ data:
           deny all;
         }
       }
-    }
+      }
