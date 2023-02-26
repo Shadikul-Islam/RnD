@@ -9,3 +9,4 @@ kubectl port-forward --address 0.0.0.0 svc/cadvisor-svc 8080:80
 kubectl port-forward --address 0.0.0.0 svc/nginx-svc 80:80
 
 kubectl port-forward --address 0.0.0.0 svc/nginx-exporter-svc 9113:80
+
