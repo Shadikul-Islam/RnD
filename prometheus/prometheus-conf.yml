@@ -11,6 +11,11 @@ data:
       - job_name: 'node-exporter'
         static_configs:
           - targets: ['node-exporter-svc:80']
+
       - job_name: 'nginx-exporter'
         static_configs:
           - targets: ['nginx-exporter-svc:80']
+
+      - job_name: 'cadvisor-exporter'
+        static_configs:
+          - targets: ['cadvisor-svc:80']
