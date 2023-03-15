@@ -12,7 +12,7 @@ def my_route():
     metrics.counter('my_route_requests', 'Number of requests to my route').inc()
 
 @app.route("/api/buckets/1")
-def my_route():
+def my_api():
     metrics.counter('my_route_requests', 'Number of requests to my route').inc()
 
 @app.route('/metrics')
