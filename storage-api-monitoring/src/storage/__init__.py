@@ -7,8 +7,7 @@ metrics = PrometheusMetrics(app)
 app.config.from_object(__name__)
 app.register_blueprint(bucket_blueprint, url_prefix="/api")
 
-@app.route('/my-route')
+@app.route('/api')
 def my_route():
     metrics.counter('my_route_requests', 'Number of requests to my route').inc()
-    return 'Hello, World!'
 
