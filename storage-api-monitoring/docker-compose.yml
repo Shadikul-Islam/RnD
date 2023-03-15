@@ -9,6 +9,7 @@ services:
     build: ./src
     ports:
       - "5000:5000"
+      - "8000:8000"
     environment:
       FLASK_APP: ./src/storage/_init__.py
       FLASK_ENV: production
