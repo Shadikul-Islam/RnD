@@ -11,6 +11,10 @@ app.register_blueprint(bucket_blueprint, url_prefix="/api")
 def my_route():
     metrics.counter('my_route_requests', 'Number of requests to my route').inc()
 
+@app.route("/api/buckets/1")
+def my_route():
+    metrics.counter('my_route_requests', 'Number of requests to my route').inc()
+
 @app.route('/metrics')
 def metrics():
     return metrics.export()
