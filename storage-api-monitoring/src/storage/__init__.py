@@ -7,12 +7,8 @@ metrics = PrometheusMetrics(app)
 app.config.from_object(__name__)
 app.register_blueprint(bucket_blueprint, url_prefix="/api")
 
-@app.route('/api')
+@app.route('/storage_api')
 def my_route():
-    metrics.counter('my_route_requests', 'Number of requests to my route').inc()
-
-@app.route("/api/buckets/1")
-def my_api():
     metrics.counter('my_route_requests', 'Number of requests to my route').inc()
 
 @app.route('/metrics')
