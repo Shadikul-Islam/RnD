@@ -1,38 +1,31 @@
 const express = require('express');
-const redis = require('redis');
-
-// Create a Redis client
-const client = redis.createClient();
-
-// Connect to Redis
-client.on('connect', () => {
-  console.log('Connected to Redis');
-});
-
-// Create an Express app
 const app = express();
 
-// Use JSON middleware
-app.use(express.json());
+app.use(express.urlencoded({ extended: true }));
 
-// Serve static files
-app.use(express.static('public'));
+app.get('/', (req, res) => {
+    res.send(`
+        <html>
+            <body>
+                <h1>Sample Form</h1>
+                <form method="POST" action="/submit">
+                    <label for="name">Name:</label>
+                    <input type="text" id="name" name="name"><br><br>
+                    <label for="email">Email:</label>
+                    <input type="email" id="email" name="email"><br><br>
+                    <button type="submit">Submit</button>
+                </form>
+            </body>
+        </html>
+    `);
+});
 
-// Handle form submission
 app.post('/submit', (req, res) => {
-  // Get data from form
-  const { name, email } = req.body;
-
-  // Store data in Redis
-  client.set(name, email);
-
-  // Send response
-  res.send('Data stored in Redis');
+    const name = req.body.name;
+    const email = req.body.email;
+    res.send(`Hello ${name}, your email address is ${email}`);
 });
 
-// Start server
-const PORT = process.env.PORT || 3000;
-app.listen(PORT, () => {
-  console.log('Server started on port ${PORT}');
+app.listen(3000, () => {
+    console.log('Server started on port 3000');
 });
-
