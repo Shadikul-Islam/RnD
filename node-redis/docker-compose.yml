@@ -7,7 +7,7 @@ services:
     container_name: node
     restart: always
     ports:
-      - 8000:8000
+      - 3000:3000
     # volumes:
     #   - ./app:/app
     working_dir: /app
