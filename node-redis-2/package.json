@@ -1,17 +1,10 @@
 {
-    "name": "app",
-    "version": "1.0.0",
-    "main": "index.js",
-    "scripts": {
-      "start": "node index.js",
-      "test": "echo \"Error: no test specified\" && exit 1"
-    },
-    "keywords": [],
-    "author": "",
-    "license": "ISC",
-    "dependencies": {
-      "redis": "^4.6.5"
-    },
-    "devDependencies": {},
-    "description": ""
+  "name": "redis-form",
+  "version": "1.0.0",
+  "description": "Sample app that stores form data in Redis",
+  "main": "server.js",
+  "dependencies": {
+    "express": "^4.17.1",
+    "redis": "^3.1.2"
   }
+}

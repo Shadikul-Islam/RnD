@@ -1,17 +1,33 @@
+const express = require('express')
 const redis = require('redis')
 
+const app = express()
 const client = redis.createClient({
   url: 'redis://redis:6379'
 })
 
-async function main() {
-  await client.connect()
+app.use(express.urlencoded({ extended: true }))
+app.use(express.json())
 
-  client.set("name", "Flavio")
-  client.set("age", 37)
+app.post('/submit', async (req, res) => {
+  const { name, age } = req.body
+  await client.set('name', name)
+  await client.set('age', age)
+  res.send('Data stored in Redis!')
+})
 
-  const value = await client.get("name")
-  console.log(value)
-}
+app.get('/data', async (req, res) => {
+  const name = await client.get('name')
+  const age = await client.get('age')
+  res.json({ name, age })
+})
 
-main()
+app.get('/', (req, res) => {
+  res.sendFile(__dirname + '/index.html')
+})
+
+const PORT = 3000
+
+app.listen(PORT, () => {
+  console.log(`Server listening on port ${PORT}`)
+})
