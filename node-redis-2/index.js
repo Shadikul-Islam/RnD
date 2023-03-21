@@ -18,12 +18,9 @@ client.on('error', (error) => {
 app.use(express.urlencoded({ extended: true }))
 app.use(express.json())
 
-// app.post('/submit', async (req, res) => {
-//   const { name, age } = req.body
-//   await client.set('name', name)
-//   await client.set('age', age)
-//   res.send('Data stored in Redis!')
-// })
+(async () => {
+  client.connect();
+})();
 
 app.post('/submit', async (req, res) => {
   const { name, age } = req.body
