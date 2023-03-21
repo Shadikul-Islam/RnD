@@ -9,11 +9,23 @@ const client = redis.createClient({
 app.use(express.urlencoded({ extended: true }))
 app.use(express.json())
 
+// app.post('/submit', async (req, res) => {
+//   const { name, age } = req.body
+//   await client.set('name', name)
+//   await client.set('age', age)
+//   res.send('Data stored in Redis!')
+// })
+
 app.post('/submit', async (req, res) => {
   const { name, age } = req.body
-  await client.set('name', name)
-  await client.set('age', age)
-  res.send('Data stored in Redis!')
+  try {
+    await client.set('name', name)
+    await client.set('age', age)
+    res.send('Data stored in Redis!')
+  } catch (error) {
+    console.error(error)
+    res.status(500).send('Error storing data in Redis')
+  }
 })
 
 app.get('/data', async (req, res) => {
