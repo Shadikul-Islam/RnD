@@ -7,6 +7,8 @@ const client = redis.createClient({
   keepAlive: true
 })
 
+client.connect();
+
 client.on('connect', () => {
   console.log('Redis client connected')
 })
@@ -17,10 +19,6 @@ client.on('error', (error) => {
 
 app.use(express.urlencoded({ extended: true }))
 app.use(express.json())
-
-(async () => {
-  client.connect();
-})();
 
 app.post('/submit', async (req, res) => {
   const { name, age } = req.body
