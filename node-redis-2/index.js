@@ -3,7 +3,16 @@ const redis = require('redis')
 
 const app = express()
 const client = redis.createClient({
-  url: 'redis://redis:6379'
+  url: 'redis://redis:6379',
+  keepAlive: true
+})
+
+client.on('connect', () => {
+  console.log('Redis client connected')
+})
+
+client.on('error', (error) => {
+  console.error('Redis client error:', error)
 })
 
 app.use(express.urlencoded({ extended: true }))
