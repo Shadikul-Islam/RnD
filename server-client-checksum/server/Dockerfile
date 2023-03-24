@@ -1,16 +1,37 @@
-FROM node:16
+# FROM node:16
 
-# Create a volume for the server data
-VOLUME ["/serverdata"]
+# # Create a volume for the server data
+# VOLUME ["/serverdata"]
 
-# Copy the server application code to the container
-COPY server.js /app/server.js
+# # Copy the server application code to the container
+# COPY server.js /app/server.js
 
-# Set the working directory
+# # Set the working directory
+# WORKDIR /app
+
+# # Install dependencies
+# RUN npm install express
+
+# # Specify the port on which the server runs
+# CMD ["node", "server.js", "--port", "3000"]
+
+FROM node:14-alpine
+
+# set working directory
 WORKDIR /app
 
-# Install dependencies
-RUN npm install express
+# copy package.json and package-lock.json
+COPY package*.json ./
 
-# Specify the port on which the server runs
-CMD ["node", "server.js", "--port", "3000"]
+# install dependencies
+RUN npm install
+
+# copy project files
+COPY . .
+
+# expose port
+EXPOSE 3000
+
+# start server
+CMD ["node", "server.js"]
+
