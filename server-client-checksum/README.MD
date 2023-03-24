@@ -12,7 +12,7 @@
 3. ```chmod +x server/fileserver.sh client/fileclient.sh```
 4. ```cd server/```
 5. ```./fileserver.sh```
-6. ```cd..```
+6. ```cd ..```
 7. ```cd client/```
 8. ```./fileclient.sh```
 9. ```docker ps```
