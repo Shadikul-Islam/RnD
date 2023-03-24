@@ -8,4 +8,4 @@ docker network create my-network
 
 # build and run the server container
 docker build -t server-image .
-docker run -it --name server-container --network my-network -v servervol:/serverdata server-image <port number>
+docker run -it --name server-container --network my-network -v servervol:/serverdata server-image 8080
