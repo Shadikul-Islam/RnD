@@ -21,7 +21,7 @@ FROM node:14-alpine
 WORKDIR /app
 
 # copy package.json and package-lock.json
-RUN npm init
+# RUN npm init
 COPY package*.json ./
 
 # install dependencies
