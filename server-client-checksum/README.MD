@@ -1,6 +1,6 @@
 ### Documentation of Step by Step Process for this Project
 
-1. Created two folder named Client and Server
+1. Created two folder named Client and Server 
 2. I have used Express.js for running server application and Python Flask for running client application.
 3. Prepared Dockerfile for server and client application with necessery package installation process.
 4. Prepared two script file named fileserver.sh and fileclient.sh to run our dockerized project. Within this file I defined to create docker volume, Build docker image and Run docker container in specific port.
