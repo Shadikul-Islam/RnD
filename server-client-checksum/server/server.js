@@ -1,42 +1,43 @@
 const express = require('express');
-const crypto = require('crypto');
 const fs = require('fs');
+const crypto = require('crypto');
 
 const app = express();
-
-const PORT = process.argv[2] || 3000;
+const port = process.argv[2] || 3000;
+const volumeDir = '/serverdata';
 
 app.get('/', (req, res) => {
-  const data = crypto.randomBytes(1024); // Generate 1KB random data
-  const filename = `file_${Date.now()}.txt`;
-  const filepath = `/serverdata/${filename}`;
+  const fileData = crypto.randomBytes(1024);
+  const fileName = 'random.txt';
+  const filePath = `${volumeDir}/${fileName}`;
 
-  // Write the data to a file in the server volume
-  fs.writeFile(filepath, data, (err) => {
-    if (err) {
-      console.log(err);
-      return res.status(500).send('Internal server error');
-    }
+  // Write file to volume
+  fs.writeFile(filePath, fileData, (err) => {
+    if (err) throw err;
+    console.log(`File ${fileName} has been written`);
 
-    // Send the file to the client
-    const stream = fs.createReadStream(filepath);
-    const hash = crypto.createHash('md5');
-
-    stream.on('data', (chunk) => {
-      hash.update(chunk);
+    // Calculate checksum of file
+    const hash = crypto.createHash('sha256');
+    const stream = fs.createReadStream(filePath);
+    stream.on('data', (data) => {
+      hash.update(data);
     });
-
     stream.on('end', () => {
       const checksum = hash.digest('hex');
+      console.log(`Checksum of ${fileName}: ${checksum}`);
+
+      // Return file and checksum to client
+      const fileStream = fs.createReadStream(filePath);
       res.set({
-        'Content-Disposition': `attachment; filename=${filename}`,
-        'Checksum': checksum,
+        'Content-Disposition': `attachment; filename=${fileName}`,
+        'Content-Type': 'text/plain',
+        'Checksum': checksum
       });
-      stream.pipe(res);
+      fileStream.pipe(res);
     });
   });
 });
 
-app.listen(PORT, () => {
-  console.log(`Server listening on port ${PORT}`);
+app.listen(port, () => {
+  console.log(`Server listening on port ${port}`);
 });
