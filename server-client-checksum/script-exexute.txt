@@ -1,1 +1,1 @@
-chmod +x fileserver.sh fileclient.sh
+chmod +x server/fileserver.sh client/fileclient.sh
