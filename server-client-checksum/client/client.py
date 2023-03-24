@@ -2,7 +2,7 @@ import os
 import requests
 import hashlib
 
-server_url = f"http://{os.environ['SERVER_HOST']}"
+server_url = f"http://18.140.235.142:3000/"
 
 def main():
     # Download the file from the server
