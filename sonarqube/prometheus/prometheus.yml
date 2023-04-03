@@ -5,10 +5,9 @@ scrape_configs:
       - targets: ['prometheus:9090']
   - job_name: 'sonarqube'
     metrics_path: '/api/prometheus/metrics'
+    params:
+      token: ['squ_70f89fbd596903b76a927c5f91f66f031057e0a8']
     static_configs:
       - targets: ['sonarqube:9000']
-    authorization:
-      type: Bearer
-      credentials: squ_70f89fbd596903b76a927c5f91f66f031057e0a8
 
 
