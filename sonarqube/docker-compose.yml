@@ -58,7 +58,7 @@ services:
       - monitor-net
 
   sonarqube:
-    build: ./Dockerfilesonar
+    build: ./sonar
     image: sonarqube:community
     hostname: sonarqube
     container_name: sonarqube
