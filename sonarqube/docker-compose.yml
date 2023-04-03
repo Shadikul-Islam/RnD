@@ -74,7 +74,7 @@ services:
     ports:
       - "9000:9000"
     command: >
-      bash -c "wget -P $SONARQUBE_HOME/extensions/plugins https://github.com/dmeiners88/sonarqube-prometheus-exporter/releases/download/v1.0.0-SNAPSHOT-2018-07-04/sonar-prometheus-exporter-1.0.0-SNAPSHOT.jar"
+      bash -c "USER root; wget -P $SONARQUBE_HOME/extensions/plugins https://github.com/dmeiners88/sonarqube-prometheus-exporter/releases/download/v1.0.0-SNAPSHOT-2018-07-04/sonar-prometheus-exporter-1.0.0-SNAPSHOT.jar"
 
     networks:
       - monitor-net
