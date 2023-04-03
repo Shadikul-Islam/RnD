@@ -74,6 +74,8 @@ services:
       - ./sonar-prometheus-exporter-1.0.0-SNAPSHOT.jar:/opt/sonarqube/extensions/plugins/sonar-prometheus-exporter-1.0.0-SNAPSHOT.jar
     ports:
       - "9000:9000"
+    command: >
+      bash -c "apt-get install curl -y"
     networks:
       - monitor-net
 
