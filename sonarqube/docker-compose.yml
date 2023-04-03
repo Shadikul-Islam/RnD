@@ -67,7 +67,7 @@ services:
       - sonarqube-plugins:/opt/sonarqube/extensions/plugins
     command: >
       bash -c "wget -P /opt/sonarqube/extensions/plugins https://github.com/mc1arke/sonarqube-community-branch-plugin/releases/download/1.9.0/sonarqube-community-branch-plugin-1.9.0.jar &&
-           /opt/sonarqube/bin/run.sh"
+           /opt/sonarqube/bin/sonar.sh run"
     depends_on:
       - db
 
@@ -82,4 +82,4 @@ services:
     volumes:
       - postgres-data:/var/lib/postgresql
       - postgres-conf:/etc/postgresql
-      
+
