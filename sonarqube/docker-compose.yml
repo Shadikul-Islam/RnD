@@ -66,10 +66,8 @@ services:
       - SONARQUBE_JDBC_PASSWORD=sonar
     volumes:
       - sonarqube-plugins:/opt/sonarqube/extensions/plugins
-      - ./init_sonar.sh:/opt/sonarqube/init_sonar.sh
     command: >
       bash -c "curl -L -o /opt/sonarqube/extensions/plugins/sonarqube-community-branch-plugin-1.9.0.jar https://github.com/mc1arke/sonarqube-community-branch-plugin/releases/download/1.9.0/sonarqube-community-branch-plugin-1.9.0.jar; exec /opt/sonarqube/bin/sonar.sh run"
-    entrypoint: /opt/sonarqube/init_sonar.sh
     depends_on:
       - db
 
