@@ -4,9 +4,9 @@ scrape_configs:
     static_configs:
       - targets: ['prometheus:9090']
   - job_name: 'sonarqube'
-    # metrics_path: '/api/prometheus/metrics'
+    metrics_path: '/api/prometheus/metrics'
     static_configs:
       # - targets: ['sonarqube:9000']
-      - targets: ['13.214.23.51:9000/api/prometheus/metrics']
+      - targets: ['13.214.23.51:9000']
 
 
