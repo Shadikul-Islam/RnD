@@ -1,3 +1,5 @@
 FROM sonarqube:community
-# RUN apt-get update
-# RUN apt-get install curl -y
+USER root
+RUN apt-get update
+RUN apt-get install curl -y
+USER sonarqube
