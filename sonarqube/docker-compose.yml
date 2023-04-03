@@ -1,0 +1,86 @@
+version: '3.9'
+
+networks:
+  monitor-net:
+    driver: bridge
+
+volumes:
+    prometheus_data: {}
+    grafana_data: {}
+    postgres-data: {}
+    postgres-conf: {}
+    sonarqube-plugins: {}
+
+services:
+
+  prometheus:
+    image: prom/prometheus:latest
+    container_name: prometheus
+    volumes:
+      - ./prometheus:/etc/prometheus
+      - prometheus_data:/prometheus
+    command:
+      - '--config.file=/etc/prometheus/prometheus.yml'
+      - '--storage.tsdb.path=/prometheus'
+      - '--web.console.libraries=/etc/prometheus/console_libraries'
+      - '--web.console.templates=/etc/prometheus/consoles'
+      - '--storage.tsdb.retention.time=200h'
+      - '--web.enable-lifecycle'
+    restart: unless-stopped
+    ports:
+     - "9090:9090"
+    # expose:
+    #    - "9090"
+    networks:
+      - monitor-net
+
+  grafana:
+    image: grafana/grafana:latest
+    build: .
+    container_name: grafana
+    volumes:
+      - ./Redis:/var/lib/grafana/plugins
+      - ./grafana/provisioning:/etc/grafana/provisioning
+    environment:
+      - GF_SECURITY_ADMIN_USER=${ADMIN_USER}
+      - GF_SECURITY_ADMIN_PASSWORD=${ADMIN_PASSWORD}
+      - GF_USERS_ALLOW_SIGN_UP=false
+    restart: unless-stopped
+    ports:
+     - "3000:3000"
+    # expose:
+    #    - "3000"
+    networks:
+      - monitor-net
+
+  sonarqube:
+    image: sonarqube:latest
+    ports:
+      - "9000:9000"
+    networks:
+      - monitor-net
+    environment:
+      - SONARQUBE_JDBC_URL=jdbc:postgresql://db:5432/sonar
+      - SONARQUBE_JDBC_USERNAME=sonar
+      - SONARQUBE_JDBC_PASSWORD=sonar
+    volumes:
+      - sonarqube-plugins:/opt/sonarqube/extensions/plugins
+    command: >
+      bash -c "wget -P /opt/sonarqube/extensions/plugins https://github.com/dmeiners88/sonarqube-prometheus-exporter/releases/download/v1.0.0/sonarqube-prometheus-exporter-1.0.0.jar &&
+               /opt/sonarqube/bin/run.sh"
+    depends_on:
+      - db
+
+  db:
+    image: postgres:latest
+    networks:
+      - monitor-net
+    environment:
+      - POSTGRES_USER=sonar
+      - POSTGRES_PASSWORD=sonar
+      - POSTGRES_DB=sonar
+    volumes:
+      - postgres-data:/var/lib/postgresql
+      - postgres-conf:/etc/postgresql
+
+
