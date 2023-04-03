@@ -7,6 +7,6 @@ scrape_configs:
     # metrics_path: '/api/prometheus/metrics'
     static_configs:
       # - targets: ['sonarqube:9000']
-      - targets: ['http://13.214.23.51:9000/api/prometheus/metrics']
+      - targets: ['13.214.23.51:9000/api/prometheus/metrics']
 
 
