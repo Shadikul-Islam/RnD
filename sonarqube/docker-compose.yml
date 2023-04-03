@@ -58,6 +58,7 @@ services:
       - monitor-net
 
   sonarqube:
+    build: ./Dockerfilesonar
     image: sonarqube:community
     hostname: sonarqube
     container_name: sonarqube
@@ -74,8 +75,6 @@ services:
       - ./sonar-prometheus-exporter-1.0.0-SNAPSHOT.jar:/opt/sonarqube/extensions/plugins/sonar-prometheus-exporter-1.0.0-SNAPSHOT.jar
     ports:
       - "9000:9000"
-    command: >
-      bash -c "user root; apt-get install curl -y"
     networks:
       - monitor-net
 
