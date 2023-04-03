@@ -67,6 +67,8 @@ services:
       - sonarqube-plugins:/opt/sonarqube/extensions/plugins
       - ./init_sonar.sh:/opt/sonarqube/init_sonar.sh
     entrypoint: /opt/sonarqube/init_sonar.sh
+    command: >
+      bash -c "apt-get install curl"
     depends_on:
       - db
 
