@@ -54,6 +54,7 @@ services:
       - monitor-net
 
   sonarqube:
+    build: .
     image: sonarqube:latest
     ports:
       - "9000:9000"

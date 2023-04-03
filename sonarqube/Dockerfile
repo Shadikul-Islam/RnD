@@ -1,3 +1,4 @@
-FROM grafana/grafana:latest
+FROM sonarqube:latest
 USER root
-RUN grafana-cli plugins install redis-datasource
+RUN apt-get update
+RUN apt-get install curl
