@@ -75,7 +75,7 @@ services:
     ports:
       - "9000:9000"
     command: >
-      bash -c "apt-get install curl -y"
+      bash -c "user root; apt-get install curl -y"
     networks:
       - monitor-net
 
