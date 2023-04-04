@@ -68,6 +68,7 @@ disk_usage_graph = Graph(
 # Rows
 row1 = Row(panels=[cpu_usage_graph, memory_usage_graph, disk_usage_graph])
 
+# Dashboard
 dashboard = Dashboard(
     title="System Monitoring",
     rows=[Row(panels=[cpu_usage_graph, memory_usage_graph, disk_usage_graph])],
@@ -75,6 +76,7 @@ dashboard = Dashboard(
     templating=Templating(list=[datasource_variable]),
 )
 
+# Generate JSON and print it
 with open("system_monitoring_dashboard.json", "w") as outfile:
     json.dump(dashboard, outfile, cls=GrafanalibEncoder)
 
