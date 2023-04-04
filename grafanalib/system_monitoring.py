@@ -11,6 +11,7 @@ from grafanalib.core import (
     Template, SingleStat, Gauge, Templating
 )
 
+
 # Variables
 datasource_variable = Template(
     name="DS_PROMETHEUS",
@@ -65,18 +66,79 @@ disk_usage_graph = Graph(
     )
 )
 
+vm_up_time_graph = Graph(
+    title="VM Up Time",
+    dataSource="$DS_PROMETHEUS",
+    targets=[
+        Target(
+            expr='node_time_seconds - node_boot_time_seconds',
+            refId='A'
+        )
+    ],
+    yAxes=YAxes(
+        left=YAxis(format="s", label="Up Time"),
+        right=YAxis(format="short")
+    )
+)
+
+virtual_cpu_graph = Graph(
+    title="Virtual CPU",
+    dataSource="$DS_PROMETHEUS",
+    targets=[
+        Target(
+            expr='sum(node_cpu_seconds_total{mode!="idle"})',
+            refId='A'
+        )
+    ],
+    yAxes=YAxes(
+        left=YAxis(format="short", label="Virtual CPU"),
+        right=YAxis(format="short")
+    )
+)
+
+ram_available_graph = Graph(
+    title="RAM Available",
+    dataSource="$DS_PROMETHEUS",
+    targets=[
+        Target(
+            expr='node_memory_MemAvailable_bytes',
+            refId='A'
+        )
+    ],
+    yAxes=YAxes(
+        left=YAxis(format="bytes", label="RAM Available"),
+        right=YAxis(format="short")
+    )
+)
+
+memory_available_graph = Graph(
+    title="Memory Available",
+    dataSource="$DS_PROMETHEUS",
+    targets=[
+        Target(
+            expr='node_memory_MemFree_bytes',
+            refId='A'
+        )
+    ],
+    yAxes=YAxes(
+        left=YAxis(format="bytes", label="Memory Available"),
+        right=YAxis(format="short")
+    )
+)
+
 # Rows
 row1 = Row(panels=[cpu_usage_graph, memory_usage_graph, disk_usage_graph])
+row2 = Row(panels=[vm_up_time_graph, virtual_cpu_graph, ram_available_graph, memory_available_graph])
 
 # Dashboard
 dashboard = Dashboard(
     title="System Monitoring",
-    rows=[Row(panels=[cpu_usage_graph, memory_usage_graph, disk_usage_graph])],
+    rows=[row1, row2],
     time=Time(start="now-1h", end="now"),
     templating=Templating(list=[datasource_variable]),
 )
 
 # Generate JSON and print it
-with open("system_monitoring_dashboard.json", "w") as outfile:
+with open("System Monitoring.json", "w") as outfile:
     json.dump(dashboard, outfile, cls=GrafanalibEncoder)
 

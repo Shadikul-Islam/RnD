@@ -4,7 +4,7 @@ sudo apt install python3 python3-pip
 
 pip3 install --user grafanalib
 
-vim system_monitoring_dashboard.py
+vim system_monitoring.py
 
-python3 system_monitoring_dashboard.py
+python3 system_monitoring.py
 
