@@ -8,3 +8,10 @@ vim system_monitoring.py
 
 python3 system_monitoring.py
 
+cat system monitoring.json
+
+copy the json and go to https://www.jsonformatter.io/ this url to format json.
+
+copy the formated json and save local as a file.json
+
+import this json file in grafana to create dashboard
