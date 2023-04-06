@@ -50,6 +50,7 @@ def convert_dashboard(dashboard_json):
 
 
 def main():
+    # Change here input_file which json file want to convert and output_file name
     input_file = 'grafana_dashboard.json'
     output_file = 'converted_dashboard.py'
 
@@ -64,5 +65,5 @@ def main():
 if __name__ == "__main__":
     main()
 
-
+# To run this script: python3 convertJsonToGrafanalib.py 
 # N.B: It is not work for every dashboard while converting again into json
