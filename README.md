@@ -11,8 +11,8 @@ _```pip3 install requests grafanalib```_ **or** _```pip3 install --user grafanal
 3. Convert grafanalib python code into json code: 
 _```python3 system_monitoring.py```_.
 
-4. We can use this json but for better look let's do indentation in json format.
-_```Go to https://www.jsonformatter.io and Paste```_.
+4. We can use this json but for better look let's do indentation in json format. Go to
+_```https://www.jsonformatter.io```_  and Paste.
 
 5. Save the formated json file in local directory.
 
