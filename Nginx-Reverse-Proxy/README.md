@@ -29,7 +29,7 @@ server {
 
 9. **Access Grafana From Kubernetes Cluster:** http://minikube-vm-ip
 
-10. **Login Grafana:** ```Username: Admin & Password: Admin```
+10. **Login Grafana:** ```Username: admin & Password: admin```
 
 11. **Add Prometheus Datasource:** ```URL: http://prometheus-svc``` --> Click Save and Test
 
