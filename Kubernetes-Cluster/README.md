@@ -1,8 +1,8 @@
 ## Prometheus ##
 
-kubectl apply -f prometheus-conf.yml,prometheus-deploy.yml,prometheus-svc.yml
+- Apply: ```kubectl apply -f prometheus-conf.yml,prometheus-deploy.yml,prometheus-svc.yml```
 
-kubectl delete -f prometheus-conf.yml,prometheus-deploy.yml,prometheus-svc.yml
+```kubectl delete -f prometheus-conf.yml,prometheus-deploy.yml,prometheus-svc.yml```
 
 ## Grafana ##
 
