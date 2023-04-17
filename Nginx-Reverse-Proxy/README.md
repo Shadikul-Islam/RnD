@@ -1,3 +1,7 @@
+# Setup Nginx-Reverse-Proxy to Access Kubernetes Cluster from Internet
+
+1. Install Nginx: 
+
 sudo apt update && sudo apt install nginx
 
 vim /etc/nginx/sites-available/reverse-proxy
