@@ -1,4 +1,5 @@
 sudo apt update && sudo apt install nginx
+
 vim /etc/nginx/sites-available/reverse-proxy
 
 
@@ -17,8 +18,13 @@ server {
 minikube ip
 
 vim /etc/nginx/sites-available/reverse-proxy
+
 sudo ln -s /etc/nginx/sites-available/reverse-proxy /etc/nginx/sites-enabled/
+
 sudo rm /etc/nginx/sites-enabled/default
+
 sudo nginx -t
+
 sudo systemctl restart nginx
+
 http://minikube-vm-ip
