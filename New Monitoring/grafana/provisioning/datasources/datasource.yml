@@ -27,8 +27,8 @@ datasources:
 - name: Redis
   type: redis
   access: proxy
-  url: "redis://redis:6379"
-  database: 0
+  url: redis://redis:6379
+  # database: 0
   isDefault: false
   version: 2
   editable: true
