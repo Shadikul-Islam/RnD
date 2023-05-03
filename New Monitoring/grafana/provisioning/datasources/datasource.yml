@@ -1,14 +1,34 @@
+# apiVersion: 1
+
+# deleteDatasources:
+#   - name: Prometheus
+
+# datasources:
+#   - name: Prometheus
+#     type: prometheus
+#     access: proxy
+#     orgId: 1
+#     url: http://prometheus:9090
+#     basicAuth: false
+#     isDefault: true
+#     editable: true
+
 apiVersion: 1
 
-deleteDatasources:
-  - name: Prometheus
-
 datasources:
-  - name: Prometheus
-    type: prometheus
-    access: proxy
-    orgId: 1
-    url: http://prometheus:9090
-    basicAuth: false
-    isDefault: true
-    editable: true
+- name: Prometheus
+  type: prometheus
+  access: proxy
+  url: http://prometheus:9090
+  isDefault: true
+  version: 1
+  editable: true
+
+- name: Redis
+  type: redis
+  access: proxy
+  url: "redis://redis:6379"
+  database: 0
+  isDefault: false
+  version: 2
+  editable: true
