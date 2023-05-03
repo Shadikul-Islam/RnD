@@ -26,7 +26,7 @@
     "fiscalYearStartMonth": 0,
     "gnetId": 7056,
     "graphTooltip": 0,
-    "id": 3,
+    "id": 6,
     "links": [],
     "liveNow": false,
     "panels": [
@@ -34,7 +34,7 @@
         "collapsed": false,
         "datasource": {
           "type": "prometheus",
-          "uid": "Bb9G8bs4k"
+          "uid": "PBFA97CFB590B2093"
         },
         "gridPos": {
           "h": 1,
@@ -48,7 +48,7 @@
           {
             "datasource": {
               "type": "prometheus",
-              "uid": "Bb9G8bs4k"
+              "uid": "PBFA97CFB590B2093"
             },
             "refId": "A"
           }
@@ -59,7 +59,7 @@
       {
         "datasource": {
           "type": "prometheus",
-          "uid": "Bb9G8bs4k"
+          "uid": "PBFA97CFB590B2093"
         },
         "fieldConfig": {
           "defaults": {
@@ -141,7 +141,7 @@
           {
             "datasource": {
               "type": "prometheus",
-              "uid": "Bb9G8bs4k"
+              "uid": "PBFA97CFB590B2093"
             },
             "expr": "ceph_health_status{cluster=\"$cluster\"}",
             "format": "time_series",
@@ -158,7 +158,7 @@
       {
         "datasource": {
           "type": "prometheus",
-          "uid": "Bb9G8bs4k"
+          "uid": "PBFA97CFB590B2093"
         },
         "fieldConfig": {
           "defaults": {
@@ -222,7 +222,7 @@
           {
             "datasource": {
               "type": "prometheus",
-              "uid": "Bb9G8bs4k"
+              "uid": "PBFA97CFB590B2093"
             },
             "expr": "sum(irate(ceph_osd_op_w_in_bytes{cluster=\"$cluster\"}[5m]))",
             "format": "time_series",
@@ -238,7 +238,7 @@
       {
         "datasource": {
           "type": "prometheus",
-          "uid": "Bb9G8bs4k"
+          "uid": "PBFA97CFB590B2093"
         },
         "fieldConfig": {
           "defaults": {
@@ -306,7 +306,7 @@
           {
             "datasource": {
               "type": "prometheus",
-              "uid": "Bb9G8bs4k"
+              "uid": "PBFA97CFB590B2093"
             },
             "expr": "sum(irate(ceph_osd_op_r_out_bytes{cluster=\"$cluster\"}[5m]))",
             "format": "time_series",
@@ -322,7 +322,7 @@
       {
         "datasource": {
           "type": "prometheus",
-          "uid": "Bb9G8bs4k"
+          "uid": "PBFA97CFB590B2093"
         },
         "fieldConfig": {
           "defaults": {
@@ -391,7 +391,7 @@
           {
             "datasource": {
               "type": "prometheus",
-              "uid": "Bb9G8bs4k"
+              "uid": "PBFA97CFB590B2093"
             },
             "expr": "ceph_cluster_total_bytes{cluster=\"$cluster\"}",
             "format": "time_series",
@@ -409,7 +409,7 @@
       {
         "datasource": {
           "type": "prometheus",
-          "uid": "Bb9G8bs4k"
+          "uid": "PBFA97CFB590B2093"
         },
         "fieldConfig": {
           "defaults": {
@@ -477,7 +477,7 @@
           {
             "datasource": {
               "type": "prometheus",
-              "uid": "Bb9G8bs4k"
+              "uid": "PBFA97CFB590B2093"
             },
             "expr": "(ceph_cluster_total_bytes{cluster=\"$cluster\"}-ceph_cluster_total_used_bytes{cluster=\"$cluster\"})/ceph_cluster_total_bytes{cluster=\"$cluster\"}",
             "format": "time_series",
@@ -495,7 +495,7 @@
       {
         "datasource": {
           "type": "prometheus",
-          "uid": "Bb9G8bs4k"
+          "uid": "PBFA97CFB590B2093"
         },
         "fieldConfig": {
           "defaults": {
@@ -558,7 +558,7 @@
           {
             "datasource": {
               "type": "prometheus",
-              "uid": "Bb9G8bs4k"
+              "uid": "PBFA97CFB590B2093"
             },
             "expr": "ceph_cluster_total_objects{cluster=\"$cluster\"}",
             "format": "time_series",
@@ -574,7 +574,7 @@
       {
         "datasource": {
           "type": "prometheus",
-          "uid": "Bb9G8bs4k"
+          "uid": "PBFA97CFB590B2093"
         },
         "fieldConfig": {
           "defaults": {
@@ -638,7 +638,7 @@
           {
             "datasource": {
               "type": "prometheus",
-              "uid": "Bb9G8bs4k"
+              "uid": "PBFA97CFB590B2093"
             },
             "expr": "sum(ceph_osd_op_w_in_bytes{cluster=\"$cluster\"})",
             "format": "time_series",
@@ -654,7 +654,7 @@
       {
         "datasource": {
           "type": "prometheus",
-          "uid": "Bb9G8bs4k"
+          "uid": "PBFA97CFB590B2093"
         },
         "fieldConfig": {
           "defaults": {
@@ -718,7 +718,7 @@
           {
             "datasource": {
               "type": "prometheus",
-              "uid": "Bb9G8bs4k"
+              "uid": "PBFA97CFB590B2093"
             },
             "expr": "sum(ceph_osd_op_r_out_bytes{cluster=\"$cluster\"})",
             "format": "time_series",
@@ -734,7 +734,7 @@
       {
         "datasource": {
           "type": "prometheus",
-          "uid": "Bb9G8bs4k"
+          "uid": "PBFA97CFB590B2093"
         },
         "fieldConfig": {
           "defaults": {
@@ -791,7 +791,7 @@
           {
             "datasource": {
               "type": "prometheus",
-              "uid": "Bb9G8bs4k"
+              "uid": "PBFA97CFB590B2093"
             },
             "expr": "count(ALERTS{cluster='$cluster', alertstate='firing'}) OR vector(0)",
             "format": "time_series",
@@ -807,7 +807,7 @@
       {
         "datasource": {
           "type": "prometheus",
-          "uid": "Bb9G8bs4k"
+          "uid": "PBFA97CFB590B2093"
         },
         "fieldConfig": {
           "defaults": {
@@ -871,7 +871,7 @@
           {
             "datasource": {
               "type": "prometheus",
-              "uid": "Bb9G8bs4k"
+              "uid": "PBFA97CFB590B2093"
             },
             "expr": "sum(irate(ceph_osd_op_w{cluster=\"$cluster\"}[5m]))",
             "format": "time_series",
@@ -887,7 +887,7 @@
       {
         "datasource": {
           "type": "prometheus",
-          "uid": "Bb9G8bs4k"
+          "uid": "PBFA97CFB590B2093"
         },
         "fieldConfig": {
           "defaults": {
@@ -955,7 +955,7 @@
           {
             "datasource": {
               "type": "prometheus",
-              "uid": "Bb9G8bs4k"
+              "uid": "PBFA97CFB590B2093"
             },
             "expr": "sum(irate(ceph_osd_op_r{cluster=\"$cluster\"}[5m]))",
             "format": "time_series",
@@ -971,7 +971,7 @@
       {
         "datasource": {
           "type": "prometheus",
-          "uid": "Bb9G8bs4k"
+          "uid": "PBFA97CFB590B2093"
         },
         "fieldConfig": {
           "defaults": {
@@ -1040,7 +1040,7 @@
           {
             "datasource": {
               "type": "prometheus",
-              "uid": "Bb9G8bs4k"
+              "uid": "PBFA97CFB590B2093"
             },
             "expr": "ceph_cluster_total_used_bytes{cluster=\"$cluster\"}",
             "format": "time_series",
@@ -1058,7 +1058,7 @@
       {
         "datasource": {
           "type": "prometheus",
-          "uid": "Bb9G8bs4k"
+          "uid": "PBFA97CFB590B2093"
         },
         "fieldConfig": {
           "defaults": {
@@ -1126,7 +1126,7 @@
           {
             "datasource": {
               "type": "prometheus",
-              "uid": "Bb9G8bs4k"
+              "uid": "PBFA97CFB590B2093"
             },
             "expr": "ceph_cluster_total_objects{cluster=\"$cluster\"}",
             "format": "time_series",
@@ -1142,7 +1142,7 @@
       {
         "datasource": {
           "type": "prometheus",
-          "uid": "Bb9G8bs4k"
+          "uid": "PBFA97CFB590B2093"
         },
         "fieldConfig": {
           "defaults": {
@@ -1205,7 +1205,7 @@
           {
             "datasource": {
               "type": "prometheus",
-              "uid": "Bb9G8bs4k"
+              "uid": "PBFA97CFB590B2093"
             },
             "expr": "sum(ceph_mon_num_sessions{cluster='$cluster'})",
             "format": "time_series",
@@ -1219,7 +1219,7 @@
       {
         "datasource": {
           "type": "prometheus",
-          "uid": "Bb9G8bs4k"
+          "uid": "PBFA97CFB590B2093"
         },
         "fieldConfig": {
           "defaults": {
@@ -1287,7 +1287,7 @@
           {
             "datasource": {
               "type": "prometheus",
-              "uid": "Bb9G8bs4k"
+              "uid": "PBFA97CFB590B2093"
             },
             "expr": "count(ceph_mon_quorum_status{cluster=\"$cluster\"})",
             "format": "time_series",
@@ -1306,7 +1306,7 @@
         "collapsed": false,
         "datasource": {
           "type": "prometheus",
-          "uid": "Bb9G8bs4k"
+          "uid": "PBFA97CFB590B2093"
         },
         "gridPos": {
           "h": 1,
@@ -1320,7 +1320,7 @@
           {
             "datasource": {
               "type": "prometheus",
-              "uid": "Bb9G8bs4k"
+              "uid": "PBFA97CFB590B2093"
             },
             "refId": "A"
           }
@@ -1331,7 +1331,7 @@
       {
         "datasource": {
           "type": "prometheus",
-          "uid": "Bb9G8bs4k"
+          "uid": "PBFA97CFB590B2093"
         },
         "fieldConfig": {
           "defaults": {
@@ -1398,7 +1398,7 @@
           {
             "datasource": {
               "type": "prometheus",
-              "uid": "Bb9G8bs4k"
+              "uid": "PBFA97CFB590B2093"
             },
             "expr": "count(ceph_osd_up{cluster=\"$cluster\"}) - count(ceph_osd_in{cluster=\"$cluster\"})",
             "format": "time_series",
@@ -1416,7 +1416,7 @@
       {
         "datasource": {
           "type": "prometheus",
-          "uid": "Bb9G8bs4k"
+          "uid": "PBFA97CFB590B2093"
         },
         "fieldConfig": {
           "defaults": {
@@ -1483,7 +1483,7 @@
           {
             "datasource": {
               "type": "prometheus",
-              "uid": "Bb9G8bs4k"
+              "uid": "PBFA97CFB590B2093"
             },
             "expr": "count(ceph_osd_up{cluster=\"$cluster\"} == 0.0) OR vector(0)",
             "format": "time_series",
@@ -1501,7 +1501,7 @@
       {
         "datasource": {
           "type": "prometheus",
-          "uid": "Bb9G8bs4k"
+          "uid": "PBFA97CFB590B2093"
         },
         "fieldConfig": {
           "defaults": {
@@ -1564,7 +1564,7 @@
           {
             "datasource": {
               "type": "prometheus",
-              "uid": "Bb9G8bs4k"
+              "uid": "PBFA97CFB590B2093"
             },
             "expr": "sum(ceph_osd_up{cluster=\"$cluster\"})",
             "format": "time_series",
@@ -1582,7 +1582,7 @@
       {
         "datasource": {
           "type": "prometheus",
-          "uid": "Bb9G8bs4k"
+          "uid": "PBFA97CFB590B2093"
         },
         "fieldConfig": {
           "defaults": {
@@ -1645,7 +1645,7 @@
           {
             "datasource": {
               "type": "prometheus",
-              "uid": "Bb9G8bs4k"
+              "uid": "PBFA97CFB590B2093"
             },
             "expr": "sum(ceph_osd_in{cluster=\"$cluster\"})",
             "format": "time_series",
@@ -1663,7 +1663,7 @@
       {
         "datasource": {
           "type": "prometheus",
-          "uid": "Bb9G8bs4k"
+          "uid": "PBFA97CFB590B2093"
         },
         "fieldConfig": {
           "defaults": {
@@ -1730,7 +1730,7 @@
           {
             "datasource": {
               "type": "prometheus",
-              "uid": "Bb9G8bs4k"
+              "uid": "PBFA97CFB590B2093"
             },
             "expr": "avg(ceph_osd_numpg{cluster=\"$cluster\"})",
             "format": "time_series",
@@ -1748,7 +1748,7 @@
       {
         "datasource": {
           "type": "prometheus",
-          "uid": "Bb9G8bs4k"
+          "uid": "PBFA97CFB590B2093"
         },
         "fieldConfig": {
           "defaults": {
@@ -1815,7 +1815,7 @@
           {
             "datasource": {
               "type": "prometheus",
-              "uid": "Bb9G8bs4k"
+              "uid": "PBFA97CFB590B2093"
             },
             "expr": "avg(ceph_osd_apply_latency_ms{cluster=\"$cluster\"})",
             "format": "time_series",
@@ -1833,7 +1833,7 @@
       {
         "datasource": {
           "type": "prometheus",
-          "uid": "Bb9G8bs4k"
+          "uid": "PBFA97CFB590B2093"
         },
         "fieldConfig": {
           "defaults": {
@@ -1900,7 +1900,7 @@
           {
             "datasource": {
               "type": "prometheus",
-              "uid": "Bb9G8bs4k"
+              "uid": "PBFA97CFB590B2093"
             },
             "expr": "avg(ceph_osd_commit_latency_ms{cluster=\"$cluster\"})",
             "format": "time_series",
@@ -1918,7 +1918,7 @@
       {
         "datasource": {
           "type": "prometheus",
-          "uid": "Bb9G8bs4k"
+          "uid": "PBFA97CFB590B2093"
         },
         "fieldConfig": {
           "defaults": {
@@ -1986,7 +1986,7 @@
           {
             "datasource": {
               "type": "prometheus",
-              "uid": "Bb9G8bs4k"
+              "uid": "PBFA97CFB590B2093"
             },
             "expr": "avg(rate(ceph_osd_op_w_latency_sum{cluster=\"$cluster\"}[5m]) / rate(ceph_osd_op_w_latency_count{cluster=\"$cluster\"}[5m]) >= 0)",
             "format": "time_series",
@@ -2001,7 +2001,7 @@
       {
         "datasource": {
           "type": "prometheus",
-          "uid": "Bb9G8bs4k"
+          "uid": "PBFA97CFB590B2093"
         },
         "fieldConfig": {
           "defaults": {
@@ -2068,7 +2068,7 @@
           {
             "datasource": {
               "type": "prometheus",
-              "uid": "Bb9G8bs4k"
+              "uid": "PBFA97CFB590B2093"
             },
             "expr": "avg(rate(ceph_osd_op_r_latency_sum{cluster=\"$cluster\"}[5m])/rate(ceph_osd_op_r_latency_count{cluster=\"$cluster\"}[5m]) >= 0)",
             "format": "time_series",
@@ -2084,7 +2084,7 @@
         "collapsed": true,
         "datasource": {
           "type": "prometheus",
-          "uid": "Bb9G8bs4k"
+          "uid": "PBFA97CFB590B2093"
         },
         "gridPos": {
           "h": 1,
@@ -2098,7 +2098,7 @@
             "columns": [],
             "datasource": {
               "type": "prometheus",
-              "uid": "Bb9G8bs4k"
+              "uid": "PBFA97CFB590B2093"
             },
             "fontSize": "100%",
             "gridPos": {
@@ -2142,7 +2142,7 @@
               {
                 "datasource": {
                   "type": "prometheus",
-                  "uid": "Bb9G8bs4k"
+                  "uid": "PBFA97CFB590B2093"
                 },
                 "expr": "ALERTS{cluster='$cluster', alertstate='firing'}",
                 "format": "table",
@@ -2160,7 +2160,7 @@
             "columns": [],
             "datasource": {
               "type": "prometheus",
-              "uid": "Bb9G8bs4k"
+              "uid": "PBFA97CFB590B2093"
             },
             "fontSize": "100%",
             "gridPos": {
@@ -2204,7 +2204,7 @@
               {
                 "datasource": {
                   "type": "prometheus",
-                  "uid": "Bb9G8bs4k"
+                  "uid": "PBFA97CFB590B2093"
                 },
                 "expr": "topk(5,sort_desc(ceph_osd_apply_latency_ms{cluster='$cluster'} + ceph_osd_commit_latency_ms{cluster='$cluster'}))",
                 "format": "table",
@@ -2222,7 +2222,7 @@
             "columns": [],
             "datasource": {
               "type": "prometheus",
-              "uid": "Bb9G8bs4k"
+              "uid": "PBFA97CFB590B2093"
             },
             "fontSize": "100%",
             "gridPos": {
@@ -2266,7 +2266,7 @@
               {
                 "datasource": {
                   "type": "prometheus",
-                  "uid": "Bb9G8bs4k"
+                  "uid": "PBFA97CFB590B2093"
                 },
                 "expr": "ceph_osd_up{cluster=\"$cluster\"} == 0",
                 "format": "table",
@@ -2285,7 +2285,7 @@
           {
             "datasource": {
               "type": "prometheus",
-              "uid": "Bb9G8bs4k"
+              "uid": "PBFA97CFB590B2093"
             },
             "refId": "A"
           }
@@ -2297,7 +2297,7 @@
         "collapsed": true,
         "datasource": {
           "type": "prometheus",
-          "uid": "Bb9G8bs4k"
+          "uid": "PBFA97CFB590B2093"
         },
         "gridPos": {
           "h": 1,
@@ -2314,7 +2314,7 @@
             "dashes": false,
             "datasource": {
               "type": "prometheus",
-              "uid": "Bb9G8bs4k"
+              "uid": "PBFA97CFB590B2093"
             },
             "fill": 1,
             "gridPos": {
@@ -2349,7 +2349,7 @@
               {
                 "datasource": {
                   "type": "prometheus",
-                  "uid": "Bb9G8bs4k"
+                  "uid": "PBFA97CFB590B2093"
                 },
                 "expr": "count by (ceph_version)(ceph_osd_metadata{cluster='$cluster'})",
                 "format": "time_series",
@@ -2395,7 +2395,7 @@
             "dashes": false,
             "datasource": {
               "type": "prometheus",
-              "uid": "Bb9G8bs4k"
+              "uid": "PBFA97CFB590B2093"
             },
             "fill": 1,
             "gridPos": {
@@ -2430,7 +2430,7 @@
               {
                 "datasource": {
                   "type": "prometheus",
-                  "uid": "Bb9G8bs4k"
+                  "uid": "PBFA97CFB590B2093"
                 },
                 "expr": "count by (ceph_version)(ceph_mon_metadata{cluster='$cluster'})",
                 "format": "time_series",
@@ -2477,7 +2477,7 @@
             "dashes": false,
             "datasource": {
               "type": "prometheus",
-              "uid": "Bb9G8bs4k"
+              "uid": "PBFA97CFB590B2093"
             },
             "fill": 1,
             "gridPos": {
@@ -2512,7 +2512,7 @@
               {
                 "datasource": {
                   "type": "prometheus",
-                  "uid": "Bb9G8bs4k"
+                  "uid": "PBFA97CFB590B2093"
                 },
                 "expr": "count by (ceph_version)(ceph_mds_metadata{cluster='$cluster'})",
                 "format": "time_series",
@@ -2559,7 +2559,7 @@
             "dashes": false,
             "datasource": {
               "type": "prometheus",
-              "uid": "Bb9G8bs4k"
+              "uid": "PBFA97CFB590B2093"
             },
             "fill": 1,
             "gridPos": {
@@ -2594,7 +2594,7 @@
               {
                 "datasource": {
                   "type": "prometheus",
-                  "uid": "Bb9G8bs4k"
+                  "uid": "PBFA97CFB590B2093"
                 },
                 "expr": "count by (ceph_version)(ceph_rgw_metadata{cluster='$cluster'})",
                 "format": "time_series",
@@ -2639,7 +2639,7 @@
           {
             "datasource": {
               "type": "prometheus",
-              "uid": "Bb9G8bs4k"
+              "uid": "PBFA97CFB590B2093"
             },
             "refId": "A"
           }
@@ -2651,7 +2651,7 @@
         "collapsed": false,
         "datasource": {
           "type": "prometheus",
-          "uid": "Bb9G8bs4k"
+          "uid": "PBFA97CFB590B2093"
         },
         "gridPos": {
           "h": 1,
@@ -2665,7 +2665,7 @@
           {
             "datasource": {
               "type": "prometheus",
-              "uid": "Bb9G8bs4k"
+              "uid": "PBFA97CFB590B2093"
             },
             "refId": "A"
           }
@@ -2687,7 +2687,7 @@
         "dashes": false,
         "datasource": {
           "type": "prometheus",
-          "uid": "Bb9G8bs4k"
+          "uid": "PBFA97CFB590B2093"
         },
         "editable": true,
         "error": false,
@@ -2742,7 +2742,7 @@
           {
             "datasource": {
               "type": "prometheus",
-              "uid": "Bb9G8bs4k"
+              "uid": "PBFA97CFB590B2093"
             },
             "expr": "ceph_cluster_total_bytes{cluster=\"$cluster\"}",
             "format": "time_series",
@@ -2755,7 +2755,7 @@
           {
             "datasource": {
               "type": "prometheus",
-              "uid": "Bb9G8bs4k"
+              "uid": "PBFA97CFB590B2093"
             },
             "expr": "ceph_cluster_total_bytes{cluster=\"$cluster\"}-ceph_cluster_total_used_bytes{cluster=\"$cluster\"}",
             "format": "time_series",
@@ -2768,7 +2768,7 @@
           {
             "datasource": {
               "type": "prometheus",
-              "uid": "Bb9G8bs4k"
+              "uid": "PBFA97CFB590B2093"
             },
             "expr": "ceph_cluster_total_used_bytes{cluster=\"$cluster\"}",
             "format": "time_series",
@@ -2823,7 +2823,7 @@
         "dashes": false,
         "datasource": {
           "type": "prometheus",
-          "uid": "Bb9G8bs4k"
+          "uid": "PBFA97CFB590B2093"
         },
         "decimals": 0,
         "editable": true,
@@ -2871,7 +2871,7 @@
           {
             "datasource": {
               "type": "prometheus",
-              "uid": "Bb9G8bs4k"
+              "uid": "PBFA97CFB590B2093"
             },
             "expr": "sum(irate(ceph_osd_op_w{cluster=\"$cluster\"}[5m]))",
             "format": "time_series",
@@ -2884,7 +2884,7 @@
           {
             "datasource": {
               "type": "prometheus",
-              "uid": "Bb9G8bs4k"
+              "uid": "PBFA97CFB590B2093"
             },
             "expr": "sum(irate(ceph_osd_op_r{cluster=\"$cluster\"}[5m]))",
             "format": "time_series",
@@ -2936,7 +2936,7 @@
         "dashes": false,
         "datasource": {
           "type": "prometheus",
-          "uid": "Bb9G8bs4k"
+          "uid": "PBFA97CFB590B2093"
         },
         "editable": true,
         "error": false,
@@ -2983,7 +2983,7 @@
           {
             "datasource": {
               "type": "prometheus",
-              "uid": "Bb9G8bs4k"
+              "uid": "PBFA97CFB590B2093"
             },
             "expr": "sum(irate(ceph_osd_op_w_in_bytes{cluster=\"$cluster\"}[5m]))",
             "format": "time_series",
@@ -2996,7 +2996,7 @@
           {
             "datasource": {
               "type": "prometheus",
-              "uid": "Bb9G8bs4k"
+              "uid": "PBFA97CFB590B2093"
             },
             "expr": "sum(irate(ceph_osd_op_r_out_bytes{cluster=\"$cluster\"}[5m]))",
             "format": "time_series",
@@ -3047,17 +3047,15 @@
         "dashes": false,
         "datasource": {
           "type": "prometheus",
-          "uid": "Bb9G8bs4k"
+          "uid": "PBFA97CFB590B2093"
         },
         "fill": 1,
-        "fillGradient": 0,
         "gridPos": {
           "h": 8,
           "w": 8,
           "x": 0,
           "y": 22
         },
-        "hiddenSeries": false,
         "id": 77,
         "legend": {
           "avg": false,
@@ -3072,11 +3070,7 @@
         "linewidth": 1,
         "links": [],
         "nullPointMode": "null",
-        "options": {
-          "alertThreshold": true
-        },
         "percentage": false,
-        "pluginVersion": "9.4.7",
         "pointradius": 5,
         "points": false,
         "renderer": "flot",
@@ -3088,7 +3082,7 @@
           {
             "datasource": {
               "type": "prometheus",
-              "uid": "Bb9G8bs4k"
+              "uid": "PBFA97CFB590B2093"
             },
             "expr": "(ceph_pool_bytes_used{cluster='$cluster'}) *on (pool_id) group_left(name)(ceph_pool_metadata{cluster='$cluster'})",
             "format": "time_series",
@@ -3134,17 +3128,15 @@
         "dashes": false,
         "datasource": {
           "type": "prometheus",
-          "uid": "Bb9G8bs4k"
+          "uid": "PBFA97CFB590B2093"
         },
         "fill": 1,
-        "fillGradient": 0,
         "gridPos": {
           "h": 8,
           "w": 8,
           "x": 8,
           "y": 22
         },
-        "hiddenSeries": false,
         "id": 78,
         "legend": {
           "avg": false,
@@ -3159,11 +3151,7 @@
         "linewidth": 1,
         "links": [],
         "nullPointMode": "null",
-        "options": {
-          "alertThreshold": true
-        },
         "percentage": false,
-        "pluginVersion": "9.4.7",
         "pointradius": 5,
         "points": false,
         "renderer": "flot",
@@ -3175,7 +3163,7 @@
           {
             "datasource": {
               "type": "prometheus",
-              "uid": "Bb9G8bs4k"
+              "uid": "PBFA97CFB590B2093"
             },
             "expr": "(ceph_pool_raw_bytes_used{cluster='$cluster'}) *on (pool_id) group_left(name)(ceph_pool_metadata{cluster='$cluster'})",
             "format": "time_series",
@@ -3221,17 +3209,15 @@
         "dashes": false,
         "datasource": {
           "type": "prometheus",
-          "uid": "Bb9G8bs4k"
+          "uid": "PBFA97CFB590B2093"
         },
         "fill": 1,
-        "fillGradient": 0,
         "gridPos": {
           "h": 8,
           "w": 8,
           "x": 16,
           "y": 22
         },
-        "hiddenSeries": false,
         "id": 79,
         "legend": {
           "avg": false,
@@ -3246,11 +3232,7 @@
         "linewidth": 1,
         "links": [],
         "nullPointMode": "null",
-        "options": {
-          "alertThreshold": true
-        },
         "percentage": false,
-        "pluginVersion": "9.4.7",
         "pointradius": 5,
         "points": false,
         "renderer": "flot",
@@ -3262,7 +3244,7 @@
           {
             "datasource": {
               "type": "prometheus",
-              "uid": "Bb9G8bs4k"
+              "uid": "PBFA97CFB590B2093"
             },
             "expr": "(ceph_pool_objects{cluster='$cluster'}) *on (pool_id) group_left(name)(ceph_pool_metadata{cluster='$cluster'})",
             "format": "time_series",
@@ -3308,17 +3290,15 @@
         "dashes": false,
         "datasource": {
           "type": "prometheus",
-          "uid": "Bb9G8bs4k"
+          "uid": "PBFA97CFB590B2093"
         },
         "fill": 1,
-        "fillGradient": 0,
         "gridPos": {
           "h": 7,
           "w": 8,
           "x": 0,
           "y": 30
         },
-        "hiddenSeries": false,
         "id": 80,
         "legend": {
           "avg": false,
@@ -3333,11 +3313,7 @@
         "linewidth": 1,
         "links": [],
         "nullPointMode": "null",
-        "options": {
-          "alertThreshold": true
-        },
         "percentage": false,
-        "pluginVersion": "9.4.7",
         "pointradius": 5,
         "points": false,
         "renderer": "flot",
@@ -3349,7 +3325,7 @@
           {
             "datasource": {
               "type": "prometheus",
-              "uid": "Bb9G8bs4k"
+              "uid": "PBFA97CFB590B2093"
             },
             "expr": "(ceph_pool_quota_bytes{cluster='$cluster'}) *on (pool_id) group_left(name)(ceph_pool_metadata{cluster='$cluster'})",
             "format": "time_series",
@@ -3395,17 +3371,15 @@
         "dashes": false,
         "datasource": {
           "type": "prometheus",
-          "uid": "Bb9G8bs4k"
+          "uid": "PBFA97CFB590B2093"
         },
         "fill": 1,
-        "fillGradient": 0,
         "gridPos": {
           "h": 7,
           "w": 8,
           "x": 8,
           "y": 30
         },
-        "hiddenSeries": false,
         "id": 81,
         "legend": {
           "alignAsTable": false,
@@ -3422,11 +3396,7 @@
         "linewidth": 1,
         "links": [],
         "nullPointMode": "null",
-        "options": {
-          "alertThreshold": true
-        },
         "percentage": false,
-        "pluginVersion": "9.4.7",
         "pointradius": 5,
         "points": false,
         "renderer": "flot",
@@ -3438,7 +3408,7 @@
           {
             "datasource": {
               "type": "prometheus",
-              "uid": "Bb9G8bs4k"
+              "uid": "PBFA97CFB590B2093"
             },
             "expr": "(ceph_pool_quota_objects{cluster='$cluster'}) *on (pool_id) group_left(name)(ceph_pool_metadata{cluster='$cluster'})",
             "format": "time_series",
@@ -3484,17 +3454,15 @@
         "dashes": false,
         "datasource": {
           "type": "prometheus",
-          "uid": "Bb9G8bs4k"
+          "uid": "PBFA97CFB590B2093"
         },
         "fill": 1,
-        "fillGradient": 0,
         "gridPos": {
           "h": 7,
           "w": 8,
           "x": 16,
           "y": 30
         },
-        "hiddenSeries": false,
         "id": 106,
         "legend": {
           "alignAsTable": false,
@@ -3511,11 +3479,7 @@
         "linewidth": 1,
         "links": [],
         "nullPointMode": "null",
-        "options": {
-          "alertThreshold": true
-        },
         "percentage": false,
-        "pluginVersion": "9.4.7",
         "pointradius": 5,
         "points": false,
         "renderer": "flot",
@@ -3527,7 +3491,7 @@
           {
             "datasource": {
               "type": "prometheus",
-              "uid": "Bb9G8bs4k"
+              "uid": "PBFA97CFB590B2093"
             },
             "expr": "count(ceph_bluestore_commit_lat_count{cluster='$cluster'})",
             "format": "time_series",
@@ -3538,7 +3502,7 @@
           {
             "datasource": {
               "type": "prometheus",
-              "uid": "Bb9G8bs4k"
+              "uid": "PBFA97CFB590B2093"
             },
             "expr": "count(ceph_filestore_journal_latency_count{cluster='$cluster'})",
             "format": "time_series",
@@ -3581,7 +3545,7 @@
         "collapsed": false,
         "datasource": {
           "type": "prometheus",
-          "uid": "Bb9G8bs4k"
+          "uid": "PBFA97CFB590B2093"
         },
         "gridPos": {
           "h": 1,
@@ -3595,7 +3559,7 @@
           {
             "datasource": {
               "type": "prometheus",
-              "uid": "Bb9G8bs4k"
+              "uid": "PBFA97CFB590B2093"
             },
             "refId": "A"
           }
@@ -3610,12 +3574,11 @@
         "dashes": false,
         "datasource": {
           "type": "prometheus",
-          "uid": "Bb9G8bs4k"
+          "uid": "PBFA97CFB590B2093"
         },
         "editable": true,
         "error": false,
         "fill": 1,
-        "fillGradient": 0,
         "grid": {},
         "gridPos": {
           "h": 12,
@@ -3623,7 +3586,6 @@
           "x": 0,
           "y": 38
         },
-        "hiddenSeries": false,
         "id": 18,
         "legend": {
           "alignAsTable": true,
@@ -3640,11 +3602,7 @@
         "linewidth": 2,
         "links": [],
         "nullPointMode": "connected",
-        "options": {
-          "alertThreshold": true
-        },
         "percentage": false,
-        "pluginVersion": "9.4.7",
         "pointradius": 5,
         "points": false,
         "renderer": "flot",
@@ -3661,7 +3619,7 @@
           {
             "datasource": {
               "type": "prometheus",
-              "uid": "Bb9G8bs4k"
+              "uid": "PBFA97CFB590B2093"
             },
             "expr": "ceph_cluster_total_objects{cluster=\"$cluster\"}",
             "format": "time_series",
@@ -3710,12 +3668,11 @@
         "dashes": false,
         "datasource": {
           "type": "prometheus",
-          "uid": "Bb9G8bs4k"
+          "uid": "PBFA97CFB590B2093"
         },
         "editable": true,
         "error": false,
         "fill": 1,
-        "fillGradient": 0,
         "grid": {},
         "gridPos": {
           "h": 12,
@@ -3723,7 +3680,6 @@
           "x": 6,
           "y": 38
         },
-        "hiddenSeries": false,
         "id": 19,
         "legend": {
           "alignAsTable": true,
@@ -3740,11 +3696,7 @@
         "linewidth": 2,
         "links": [],
         "nullPointMode": "connected",
-        "options": {
-          "alertThreshold": true
-        },
         "percentage": false,
-        "pluginVersion": "9.4.7",
         "pointradius": 5,
         "points": false,
         "renderer": "flot",
@@ -3761,7 +3713,7 @@
           {
             "datasource": {
               "type": "prometheus",
-              "uid": "Bb9G8bs4k"
+              "uid": "PBFA97CFB590B2093"
             },
             "expr": "ceph_pg_active{cluster=\"$cluster\"}",
             "format": "time_series",
@@ -3773,7 +3725,7 @@
           {
             "datasource": {
               "type": "prometheus",
-              "uid": "Bb9G8bs4k"
+              "uid": "PBFA97CFB590B2093"
             },
             "expr": "ceph_pg_clean{cluster=\"$cluster\"}",
             "format": "time_series",
@@ -3785,7 +3737,7 @@
           {
             "datasource": {
               "type": "prometheus",
-              "uid": "Bb9G8bs4k"
+              "uid": "PBFA97CFB590B2093"
             },
             "expr": "ceph_pg_peering{cluster=\"$cluster\"}",
             "format": "time_series",
@@ -3797,7 +3749,7 @@
           {
             "datasource": {
               "type": "prometheus",
-              "uid": "Bb9G8bs4k"
+              "uid": "PBFA97CFB590B2093"
             },
             "expr": "ceph_pg_degraded{cluster=\"$cluster\"}",
             "format": "time_series",
@@ -3810,7 +3762,7 @@
           {
             "datasource": {
               "type": "prometheus",
-              "uid": "Bb9G8bs4k"
+              "uid": "PBFA97CFB590B2093"
             },
             "expr": "ceph_pg_stale{cluster=\"$cluster\"}",
             "format": "time_series",
@@ -3823,7 +3775,7 @@
           {
             "datasource": {
               "type": "prometheus",
-              "uid": "Bb9G8bs4k"
+              "uid": "PBFA97CFB590B2093"
             },
             "expr": "ceph_unclean_pgs{cluster=\"$cluster\"}",
             "format": "time_series",
@@ -3836,7 +3788,7 @@
           {
             "datasource": {
               "type": "prometheus",
-              "uid": "Bb9G8bs4k"
+              "uid": "PBFA97CFB590B2093"
             },
             "expr": "ceph_pg_undersized{cluster=\"$cluster\"}",
             "format": "time_series",
@@ -3849,7 +3801,7 @@
           {
             "datasource": {
               "type": "prometheus",
-              "uid": "Bb9G8bs4k"
+              "uid": "PBFA97CFB590B2093"
             },
             "expr": "ceph_pg_incomplete{cluster=\"$cluster\"}",
             "format": "time_series",
@@ -3861,7 +3813,7 @@
           {
             "datasource": {
               "type": "prometheus",
-              "uid": "Bb9G8bs4k"
+              "uid": "PBFA97CFB590B2093"
             },
             "expr": "ceph_pg_forced_backfill{cluster=\"$cluster\"}",
             "format": "time_series",
@@ -3873,7 +3825,7 @@
           {
             "datasource": {
               "type": "prometheus",
-              "uid": "Bb9G8bs4k"
+              "uid": "PBFA97CFB590B2093"
             },
             "expr": "ceph_pg_inconsistent{cluster=\"$cluster\"}",
             "format": "time_series",
@@ -3885,7 +3837,7 @@
           {
             "datasource": {
               "type": "prometheus",
-              "uid": "Bb9G8bs4k"
+              "uid": "PBFA97CFB590B2093"
             },
             "expr": "ceph_pg_forced_recovery{cluster=\"$cluster\"}",
             "format": "time_series",
@@ -3897,7 +3849,7 @@
           {
             "datasource": {
               "type": "prometheus",
-              "uid": "Bb9G8bs4k"
+              "uid": "PBFA97CFB590B2093"
             },
             "expr": "ceph_pg_creating{cluster=\"$cluster\"}",
             "format": "time_series",
@@ -3909,7 +3861,7 @@
           {
             "datasource": {
               "type": "prometheus",
-              "uid": "Bb9G8bs4k"
+              "uid": "PBFA97CFB590B2093"
             },
             "expr": "ceph_pg_wait_backfill{cluster=\"$cluster\"}",
             "format": "time_series",
@@ -3921,7 +3873,7 @@
           {
             "datasource": {
               "type": "prometheus",
-              "uid": "Bb9G8bs4k"
+              "uid": "PBFA97CFB590B2093"
             },
             "expr": "ceph_pg_deep{cluster=\"$cluster\"}",
             "format": "time_series",
@@ -3933,7 +3885,7 @@
           {
             "datasource": {
               "type": "prometheus",
-              "uid": "Bb9G8bs4k"
+              "uid": "PBFA97CFB590B2093"
             },
             "expr": "ceph_pg_scrubbing{cluster=\"$cluster\"}",
             "format": "time_series",
@@ -3945,7 +3897,7 @@
           {
             "datasource": {
               "type": "prometheus",
-              "uid": "Bb9G8bs4k"
+              "uid": "PBFA97CFB590B2093"
             },
             "expr": "ceph_pg_recovering{cluster=\"$cluster\"}",
             "format": "time_series",
@@ -3957,7 +3909,7 @@
           {
             "datasource": {
               "type": "prometheus",
-              "uid": "Bb9G8bs4k"
+              "uid": "PBFA97CFB590B2093"
             },
             "expr": "ceph_pg_repair{cluster=\"$cluster\"}",
             "format": "time_series",
@@ -3969,7 +3921,7 @@
           {
             "datasource": {
               "type": "prometheus",
-              "uid": "Bb9G8bs4k"
+              "uid": "PBFA97CFB590B2093"
             },
             "expr": "ceph_pg_down{cluster=\"$cluster\"}",
             "format": "time_series",
@@ -3981,7 +3933,7 @@
           {
             "datasource": {
               "type": "prometheus",
-              "uid": "Bb9G8bs4k"
+              "uid": "PBFA97CFB590B2093"
             },
             "expr": "ceph_pg_peered{cluster=\"$cluster\"}",
             "format": "time_series",
@@ -3993,7 +3945,7 @@
           {
             "datasource": {
               "type": "prometheus",
-              "uid": "Bb9G8bs4k"
+              "uid": "PBFA97CFB590B2093"
             },
             "expr": "ceph_pg_backfill{cluster=\"$cluster\"}",
             "format": "time_series",
@@ -4005,7 +3957,7 @@
           {
             "datasource": {
               "type": "prometheus",
-              "uid": "Bb9G8bs4k"
+              "uid": "PBFA97CFB590B2093"
             },
             "expr": "ceph_pg_remapped{cluster=\"$cluster\"}",
             "format": "time_series",
@@ -4017,7 +3969,7 @@
           {
             "datasource": {
               "type": "prometheus",
-              "uid": "Bb9G8bs4k"
+              "uid": "PBFA97CFB590B2093"
             },
             "expr": "ceph_pg_backfill_toofull{cluster=\"$cluster\"}",
             "format": "time_series",
@@ -4066,12 +4018,11 @@
         "dashes": false,
         "datasource": {
           "type": "prometheus",
-          "uid": "Bb9G8bs4k"
+          "uid": "PBFA97CFB590B2093"
         },
         "editable": true,
         "error": false,
         "fill": 1,
-        "fillGradient": 0,
         "grid": {},
         "gridPos": {
           "h": 6,
@@ -4079,7 +4030,6 @@
           "x": 14,
           "y": 38
         },
-        "hiddenSeries": false,
         "id": 20,
         "legend": {
           "alignAsTable": true,
@@ -4096,11 +4046,7 @@
         "linewidth": 2,
         "links": [],
         "nullPointMode": "connected",
-        "options": {
-          "alertThreshold": true
-        },
         "percentage": false,
-        "pluginVersion": "9.4.7",
         "pointradius": 5,
         "points": false,
         "renderer": "flot",
@@ -4117,7 +4063,7 @@
           {
             "datasource": {
               "type": "prometheus",
-              "uid": "Bb9G8bs4k"
+              "uid": "PBFA97CFB590B2093"
             },
             "expr": "ceph_pg_degraded{cluster=\"$cluster\"}",
             "format": "time_series",
@@ -4130,7 +4076,7 @@
           {
             "datasource": {
               "type": "prometheus",
-              "uid": "Bb9G8bs4k"
+              "uid": "PBFA97CFB590B2093"
             },
             "expr": "ceph_pg_stale{cluster=\"$cluster\"}",
             "format": "time_series",
@@ -4143,7 +4089,7 @@
           {
             "datasource": {
               "type": "prometheus",
-              "uid": "Bb9G8bs4k"
+              "uid": "PBFA97CFB590B2093"
             },
             "expr": "ceph_pg_undersized{cluster=\"$cluster\"}",
             "format": "time_series",
@@ -4193,7 +4139,7 @@
         "dashes": false,
         "datasource": {
           "type": "prometheus",
-          "uid": "Bb9G8bs4k"
+          "uid": "PBFA97CFB590B2093"
         },
         "editable": true,
         "error": false,
@@ -4231,7 +4177,7 @@
           {
             "datasource": {
               "type": "prometheus",
-              "uid": "Bb9G8bs4k"
+              "uid": "PBFA97CFB590B2093"
             },
             "expr": "sum(irate(ceph_osd_recovery_ops{cluster=\"$cluster\"}[$interval]))",
             "format": "time_series",
@@ -4278,7 +4224,7 @@
         "collapsed": false,
         "datasource": {
           "type": "prometheus",
-          "uid": "Bb9G8bs4k"
+          "uid": "PBFA97CFB590B2093"
         },
         "gridPos": {
           "h": 1,
@@ -4292,7 +4238,7 @@
           {
             "datasource": {
               "type": "prometheus",
-              "uid": "Bb9G8bs4k"
+              "uid": "PBFA97CFB590B2093"
             },
             "refId": "A"
           }
@@ -4312,7 +4258,7 @@
         "dataFormat": "timeseries",
         "datasource": {
           "type": "prometheus",
-          "uid": "Bb9G8bs4k"
+          "uid": "PBFA97CFB590B2093"
         },
         "gridPos": {
           "h": 8,
@@ -4331,7 +4277,7 @@
           {
             "datasource": {
               "type": "prometheus",
-              "uid": "Bb9G8bs4k"
+              "uid": "PBFA97CFB590B2093"
             },
             "expr": "ceph_osd_apply_latency_ms{cluster='$cluster'}",
             "format": "time_series",
@@ -4373,7 +4319,7 @@
         "dataFormat": "timeseries",
         "datasource": {
           "type": "prometheus",
-          "uid": "Bb9G8bs4k"
+          "uid": "PBFA97CFB590B2093"
         },
         "gridPos": {
           "h": 8,
@@ -4392,7 +4338,7 @@
           {
             "datasource": {
               "type": "prometheus",
-              "uid": "Bb9G8bs4k"
+              "uid": "PBFA97CFB590B2093"
             },
             "expr": "ceph_osd_commit_latency_ms{cluster='$cluster'}",
             "format": "time_series",
@@ -4432,7 +4378,7 @@
         "dataFormat": "timeseries",
         "datasource": {
           "type": "prometheus",
-          "uid": "Bb9G8bs4k"
+          "uid": "PBFA97CFB590B2093"
         },
         "gridPos": {
           "h": 8,
@@ -4451,7 +4397,7 @@
           {
             "datasource": {
               "type": "prometheus",
-              "uid": "Bb9G8bs4k"
+              "uid": "PBFA97CFB590B2093"
             },
             "expr": "rate(ceph_osd_op_r_latency_sum{cluster=\"$cluster\"}[5m]) / rate(ceph_osd_op_r_latency_count{cluster=\"$cluster\"}[5m]) >= 0",
             "format": "time_series",
@@ -4492,7 +4438,7 @@
         "dataFormat": "timeseries",
         "datasource": {
           "type": "prometheus",
-          "uid": "Bb9G8bs4k"
+          "uid": "PBFA97CFB590B2093"
         },
         "gridPos": {
           "h": 8,
@@ -4511,7 +4457,7 @@
           {
             "datasource": {
               "type": "prometheus",
-              "uid": "Bb9G8bs4k"
+              "uid": "PBFA97CFB590B2093"
             },
             "expr": "rate(ceph_osd_op_w_latency_sum{cluster=\"$cluster\"}[5m]) / rate(ceph_osd_op_w_latency_count{cluster=\"$cluster\"}[5m]) >= 0",
             "format": "time_series",
@@ -4547,7 +4493,7 @@
         "dashes": false,
         "datasource": {
           "type": "prometheus",
-          "uid": "Bb9G8bs4k"
+          "uid": "PBFA97CFB590B2093"
         },
         "fill": 1,
         "gridPos": {
@@ -4584,7 +4530,7 @@
           {
             "datasource": {
               "type": "prometheus",
-              "uid": "Bb9G8bs4k"
+              "uid": "PBFA97CFB590B2093"
             },
             "expr": "avg(rate(ceph_osd_op_r_latency_sum{cluster=\"$cluster\"}[5m]) / rate(ceph_osd_op_r_latency_count{cluster=\"$cluster\"}[5m]) >= 0)",
             "format": "time_series",
@@ -4595,7 +4541,7 @@
           {
             "datasource": {
               "type": "prometheus",
-              "uid": "Bb9G8bs4k"
+              "uid": "PBFA97CFB590B2093"
             },
             "expr": "avg(rate(ceph_osd_op_w_latency_sum{cluster=\"$cluster\"}[5m]) / rate(ceph_osd_op_w_latency_count{cluster=\"$cluster\"}[5m]) >= 0)",
             "format": "time_series",
@@ -4641,7 +4587,7 @@
         "dashes": false,
         "datasource": {
           "type": "prometheus",
-          "uid": "Bb9G8bs4k"
+          "uid": "PBFA97CFB590B2093"
         },
         "fill": 1,
         "gridPos": {
@@ -4679,7 +4625,7 @@
           {
             "datasource": {
               "type": "prometheus",
-              "uid": "Bb9G8bs4k"
+              "uid": "PBFA97CFB590B2093"
             },
             "expr": "avg(ceph_osd_apply_latency_ms{cluster=\"$cluster\"})",
             "format": "time_series",
@@ -4693,7 +4639,7 @@
           {
             "datasource": {
               "type": "prometheus",
-              "uid": "Bb9G8bs4k"
+              "uid": "PBFA97CFB590B2093"
             },
             "expr": "avg(ceph_osd_commit_latency_ms{cluster=\"$cluster\"})",
             "format": "time_series",
@@ -4739,7 +4685,7 @@
         "collapsed": true,
         "datasource": {
           "type": "prometheus",
-          "uid": "Bb9G8bs4k"
+          "uid": "PBFA97CFB590B2093"
         },
         "gridPos": {
           "h": 1,
@@ -4756,7 +4702,7 @@
             "dashes": false,
             "datasource": {
               "type": "prometheus",
-              "uid": "Bb9G8bs4k"
+              "uid": "PBFA97CFB590B2093"
             },
             "fill": 1,
             "gridPos": {
@@ -4793,7 +4739,7 @@
               {
                 "datasource": {
                   "type": "prometheus",
-                  "uid": "Bb9G8bs4k"
+                  "uid": "PBFA97CFB590B2093"
                 },
                 "expr": "node_memory_Active_anon_bytes{cluster=\"$cluster\"}",
                 "format": "time_series",
@@ -4804,7 +4750,7 @@
               {
                 "datasource": {
                   "type": "prometheus",
-                  "uid": "Bb9G8bs4k"
+                  "uid": "PBFA97CFB590B2093"
                 },
                 "expr": "sum(node_memory_Active_anon_bytes{cluster='$cluster'})",
                 "format": "time_series",
@@ -4849,7 +4795,7 @@
             "dashes": false,
             "datasource": {
               "type": "prometheus",
-              "uid": "Bb9G8bs4k"
+              "uid": "PBFA97CFB590B2093"
             },
             "fill": 1,
             "gridPos": {
@@ -4886,7 +4832,7 @@
               {
                 "datasource": {
                   "type": "prometheus",
-                  "uid": "Bb9G8bs4k"
+                  "uid": "PBFA97CFB590B2093"
                 },
                 "expr": "avg by(instance)(irate(node_cpu_seconds_total{job='node',cluster='$cluster', mode!=\"idle\"}[$interval])) * 100",
                 "format": "time_series",
@@ -4931,7 +4877,7 @@
             "dashes": false,
             "datasource": {
               "type": "prometheus",
-              "uid": "Bb9G8bs4k"
+              "uid": "PBFA97CFB590B2093"
             },
             "fill": 1,
             "gridPos": {
@@ -4968,7 +4914,7 @@
               {
                 "datasource": {
                   "type": "prometheus",
-                  "uid": "Bb9G8bs4k"
+                  "uid": "PBFA97CFB590B2093"
                 },
                 "expr": "sum by (instance)(irate(node_disk_read_bytes_total{cluster='$cluster'}[$interval]))",
                 "format": "time_series",
@@ -5013,7 +4959,7 @@
             "dashes": false,
             "datasource": {
               "type": "prometheus",
-              "uid": "Bb9G8bs4k"
+              "uid": "PBFA97CFB590B2093"
             },
             "fill": 1,
             "gridPos": {
@@ -5050,7 +4996,7 @@
               {
                 "datasource": {
                   "type": "prometheus",
-                  "uid": "Bb9G8bs4k"
+                  "uid": "PBFA97CFB590B2093"
                 },
                 "expr": "sum by (instance)(irate(node_disk_written_bytes_total{cluster='$cluster'}[$interval]))",
                 "format": "time_series",
@@ -5095,7 +5041,7 @@
             "dashes": false,
             "datasource": {
               "type": "prometheus",
-              "uid": "Bb9G8bs4k"
+              "uid": "PBFA97CFB590B2093"
             },
             "fill": 1,
             "gridPos": {
@@ -5130,7 +5076,7 @@
               {
                 "datasource": {
                   "type": "prometheus",
-                  "uid": "Bb9G8bs4k"
+                  "uid": "PBFA97CFB590B2093"
                 },
                 "expr": "(node_filesystem_free_bytes{cluster=\"$cluster\", mountpoint='/', device != 'rootfs'})*100 / (node_filesystem_size_bytes{cluster=\"$cluster\", mountpoint='/', device != 'rootfs'})",
                 "format": "time_series",
@@ -5173,7 +5119,7 @@
           {
             "datasource": {
               "type": "prometheus",
-              "uid": "Bb9G8bs4k"
+              "uid": "PBFA97CFB590B2093"
             },
             "refId": "A"
           }
@@ -5293,7 +5239,7 @@
           },
           "datasource": {
             "type": "prometheus",
-            "uid": "Bb9G8bs4k"
+            "uid": "PBFA97CFB590B2093"
           },
           "definition": "",
           "hide": 0,
@@ -5348,7 +5294,7 @@
     },
     "timezone": "browser",
     "title": "Ceph Cluster",
-    "uid": "r6lloPJmz",
+    "uid": "ceph",
     "version": 1,
     "weekStart": ""
   }
