@@ -4,6 +4,8 @@
 
 ```docker-compose up -d --build```
 
+```docker-compose down```
+
 ```docker login```
 
 ```docker commit frontend frontend```
@@ -31,3 +33,5 @@
 ```docker push shadikul/python-compiler```
 
 ```docker stack deploy -c deploy.yml online-ide```
+
+```docker stack rm online-ide```
