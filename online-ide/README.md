@@ -1,6 +1,6 @@
 ### Online IDE Which Will Complile C, Java, Python Code in Online Using Docker-Compose, Docker-Swarm and Python Flask
 
-#### Necessery Commands:
+#### Necessary Commands:
 
 ```docker-compose up -d --build```
 
