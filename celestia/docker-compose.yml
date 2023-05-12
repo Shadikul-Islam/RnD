@@ -66,7 +66,21 @@ services:
       - '--path.sysfs=/host/sys'
       - '--collector.filesystem.ignored-mount-points=^/(sys|proc|dev|host|etc)($$|/)'
     restart: unless-stopped
-    expose:
-       - "9100"
+    ports:
+     - "9100:9100"
+    networks:
+      - monitor-net
+
+  otel-collector:
+    image: otel/opentelemetry-collector:latest
+    container_name: otel-collector
+    volumes:
+      - ./otel-collector-config.yml:/otel-collector-config.yml
+    command:
+      - '--config=/otel-collector-config.yml'
+    ports:
+      - '4317:4317'
+      - '8888:8888'
+      - '8889:8889'
     networks:
       - monitor-net

@@ -34,7 +34,6 @@ services:
     build: .
     container_name: grafana
     volumes:
-      - ./Redis:/var/lib/grafana/plugins
       - ./grafana/provisioning:/etc/grafana/provisioning
       - ./grafana/provisioning/grafana.ini:/etc/grafana/grafana.ini
     environment:
