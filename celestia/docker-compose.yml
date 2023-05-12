@@ -71,12 +71,12 @@ services:
       - monitor-net
 
   otel-collector:
-    image: otel/opentelemetry-collector:latest
+    image: otel/opentelemetry-collector:0.75.0
     container_name: otel-collector
     volumes:
-      - ./otel-collector-config.yml:/otel-collector-config.yml
+      - ./otel-collector-config.yml:/etc/otelcol/otel-collector-config.yml
     command:
-      - '--config=/otel-collector-config.yml'
+      - '--config=/etc/otelcol/otel-collector-config.yml'
     ports:
       - '4317:4317'
       - '8888:8888'
