@@ -12,6 +12,7 @@ chmod a+x light-node.sh
 
 # Stop Celestia Service
 sudo systemctl stop celestia-light
+sudo rm /etc/systemd/system/celestia-light.service
 
 # Create a System Service for Celestia
 sudo tee /etc/systemd/system/celestia-light.service << EOF
