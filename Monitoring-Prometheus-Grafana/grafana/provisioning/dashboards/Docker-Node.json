@@ -2116,7 +2116,7 @@
     "type": "timepicker"
   },
   "timezone": "browser",
-  "title": "System Monitoring",
+  "title": "Docker Node",
   "uid": "05",
   "version": 45
 }
